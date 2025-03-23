@@ -38,7 +38,8 @@ a:hover {
 .container {
     max-width: 990px;
     margin: 0 auto;
-    padding: 20px 0;
+    padding: 20px 5%;
+    width: 90%;
 }
 
 .content-wrapper {
@@ -239,13 +240,26 @@ footer {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+    .container {
+        padding: 20px 7%;
+        width: 86%;
+    }
+    
     .experiments {
         grid-template-columns: 1fr;
+        gap: 30px;
     }
     
     .theme-switcher {
         bottom: 10px;
         right: 10px;
         padding: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px 10%;
+        width: 80%;
     }
 }
