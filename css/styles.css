@@ -114,8 +114,8 @@ header h1 {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    right: 0;
+    bottom: 0;
     background-color: var(--primary-color);
     border: 1px solid var(--primary-color);
     border-radius: var(--border-radius);
@@ -126,13 +126,12 @@ header h1 {
     background-color: var(--light-gray);
     border-radius: var(--border-radius);
     border: 1px solid var(--primary-color);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    position: relative;
     transition: var(--transition);
     z-index: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .experiment-card:hover {
@@ -142,6 +141,9 @@ header h1 {
 .card-content {
     padding: 25px;
     padding-top: 35px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Card label */
@@ -178,7 +180,7 @@ header h1 {
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
-    margin-bottom: 15px;
+    margin-top: 15px;
 }
 
 .card-tag {
@@ -192,6 +194,7 @@ header h1 {
 .card-links {
     display: flex;
     gap: 15px;
+    margin-top: 20px;
 }
 
 .card-link {
