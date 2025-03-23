@@ -17,32 +17,24 @@
     </header>
 
     <main class="container">
-
-        
-        <section class="intro">
-            <pre class="terminal-text">
+        <div class="content-wrapper">
+            <section class="intro">
+                <pre class="terminal-text">
 $ whoami
-> coder
+> Baptiste
+
 $ cat welcome.txt
 > Welcome to /dev/vibe - a collection of coding experiments with LLMs
-> Browse through the experiments below or use grep to filter
+> Browse through the experiments below, feel free to check the result or view the source code
 $ _
-            </pre>
-        </section>
+                </pre>
+            </section>
 
-        <section class="filters">
-            <div class="search-container">
-                <input type="text" id="search-input" placeholder="Search experiments...">
-            </div>
-            <div class="tag-filters" id="tag-filters">
-                <!-- Tags will be dynamically inserted here -->
-            </div>
-        </section>
-
-        <section class="experiments" id="experiments-container">
-            <!-- Experiments will be dynamically inserted here -->
-            <div class="loading">Loading experiments...</div>
-        </section>
+            <section class="experiments" id="experiments-container">
+                <!-- Experiments will be dynamically inserted here -->
+                <div class="loading">Loading experiments...</div>
+            </section>
+        </div>
     </main>
 
     <footer>

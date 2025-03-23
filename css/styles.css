@@ -9,6 +9,10 @@
     --transition: all 0.2s ease-in-out;
 }
 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 /* Base Styles */
 body {
     font-family: 'Courier New', monospace;
@@ -16,7 +20,7 @@ body {
     color: var(--primary-color);
     line-height: 1.6;
     margin: 0;
-    padding: 0 20px;
+    padding: 0;
 }
 
 a {
@@ -32,9 +36,15 @@ a:hover {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 990px;
     margin: 0 auto;
     padding: 20px 0;
+}
+
+.content-wrapper {
+    width: 100%;
+    max-width: 990px;
+    margin: 0 auto;
 }
 
 /* Header */
@@ -62,14 +72,12 @@ header h1 {
 
 /* Intro Section */
 .intro {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     text-align: left;
-    max-width: 800px;
-    margin-left: 0;
-    margin-right: auto;
+    width: 100%;
     background-color: var(--light-gray);
     border: 1px solid var(--primary-color);
-    padding: 20px;
+    padding: 25px;
     transition: var(--transition);
 }
 
@@ -78,53 +86,20 @@ header h1 {
     margin: 0;
     white-space: pre-wrap;
     line-height: 1.5;
+    overflow-x: hidden;
 }
 
-/* Filters */
-.filters {
-    margin-bottom: 30px;
-}
 
-.search-container {
-    margin-bottom: 15px;
-}
 
-#search-input {
-    width: 100%;
-    padding: 8px 12px;
-    background-color: var(--light-gray);
-    border: 1px solid var(--primary-color);
-    color: var(--primary-color);
-    font-family: var(--terminal-font);
-}
 
-.tag-filters {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
-.tag {
-    background-color: var(--light-gray);
-    border: 1px solid var(--primary-color);
-    padding: 5px 10px;
-    cursor: pointer;
-    transition: var(--transition);
-    font-size: 0.9rem;
-}
-
-.tag.active {
-    background-color: var(--primary-color);
-    color: var(--background-color);
-}
 
 /* Experiments */
 .experiments {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
     position: relative;
+    width: 100%;
 }
 
 /* Experiment Card */
@@ -135,6 +110,7 @@ header h1 {
     transition: var(--transition);
     border: 1px solid var(--primary-color);
     position: relative;
+    min-height: 250px; /* Ensure cards have a good height */
 }
 
 .experiment-card:hover {
@@ -143,13 +119,13 @@ header h1 {
 }
 
 .card-content {
-    padding: 20px;
-    padding-top: 30px;
+    padding: 25px;
+    padding-top: 35px;
 }
 
 /* Card label */
 .experiment-card::before {
-    content: '> experiment_' attr(data-id) '.sh';
+    content: '> experiment_' attr(data-id);
     position: absolute;
     top: 0;
     left: 0;

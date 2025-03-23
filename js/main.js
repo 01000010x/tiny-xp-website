@@ -3,13 +3,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     // DOM elements
     const experimentsContainer = document.getElementById('experiments-container');
-    const tagFiltersContainer = document.getElementById('tag-filters');
-    const searchInput = document.getElementById('search-input');
     
     // State
     let experiments = [];
-    let activeTags = [];
-    let allTags = [];
     
     // Fetch experiments data from JSON file
     async function fetchExperiments() {
@@ -42,11 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
         
-        // Extract all unique tags
-        allTags = [...new Set(experiments.flatMap(exp => exp.tags))].sort();
-        
-        // Render tag filters
-        renderTagFilters();
+
         
         // Render all experiments
         renderExperiments();
@@ -55,16 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setupEventListeners();
     }
     
-    // Render tag filters
-    function renderTagFilters() {
-        if (allTags.length === 0) return;
-        
-        const tagsHTML = allTags.map(tag => `
-            <div class="tag" data-tag="${tag}">${tag}</div>
-        `).join('');
-        
-        tagFiltersContainer.innerHTML = tagsHTML;
-    }
+
     
     // Render experiments
     function renderExperiments() {
@@ -99,48 +82,14 @@ document.addEventListener('DOMContentLoaded', () => {
         experimentsContainer.innerHTML = experimentsHTML;
     }
     
-    // Filter experiments based on search and active tags
+    // No filtering needed anymore
     function filterExperiments() {
-        const searchTerm = searchInput.value.toLowerCase().trim();
-        
-        return experiments.filter(experiment => {
-            // Filter by search term
-            const matchesSearch = searchTerm === '' || 
-                experiment.title.toLowerCase().includes(searchTerm) || 
-                experiment.description.toLowerCase().includes(searchTerm);
-            
-            // Filter by tags
-            const matchesTags = activeTags.length === 0 || 
-                activeTags.every(tag => experiment.tags.includes(tag));
-            
-            return matchesSearch && matchesTags;
-        });
+        return experiments;
     }
     
     // Set up event listeners
     function setupEventListeners() {
-        // Search input
-        searchInput.addEventListener('input', debounce(() => {
-            renderExperiments();
-        }, 300));
-        
-        // Tag filters
-        tagFiltersContainer.addEventListener('click', (event) => {
-            if (event.target.classList.contains('tag')) {
-                const tag = event.target.dataset.tag;
-                
-                // Toggle tag selection
-                if (activeTags.includes(tag)) {
-                    activeTags = activeTags.filter(t => t !== tag);
-                    event.target.classList.remove('active');
-                } else {
-                    activeTags.push(tag);
-                    event.target.classList.add('active');
-                }
-                
-                renderExperiments();
-            }
-        });
+        // No event listeners needed
     }
     
     // Debounce function to limit how often a function is called
