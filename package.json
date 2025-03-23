@@ -1,0 +1,20 @@
+{
+  "name": "tiny-experiments",
+  "version": "1.0.0",
+  "description": "A showcase of coding experiments with LLMs",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx http-server -o -p 3000",
+    "start": "npx http-server -p 3000"
+  },
+  "keywords": [
+    "experiments",
+    "llm",
+    "coding"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

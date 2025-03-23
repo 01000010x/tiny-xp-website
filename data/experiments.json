@@ -1,0 +1,31 @@
+{
+  "experiments": [
+    {
+      "id": "1",
+      "title": "Text-to-Image Generator",
+      "description": "A simple experiment using LLMs to generate image descriptions that are then rendered using a graphics library.",
+      "image": "images/placeholder.jpg",
+      "demoUrl": "#demo-1",
+      "codeUrl": "#code-1",
+      "tags": ["LLM", "Image Generation", "JavaScript"]
+    },
+    {
+      "id": "2",
+      "title": "Code Explainer Bot",
+      "description": "An interactive tool that uses LLMs to explain complex code snippets in plain English.",
+      "image": "images/placeholder.jpg",
+      "demoUrl": "#demo-2",
+      "codeUrl": "#code-2",
+      "tags": ["LLM", "Code Analysis", "Python"]
+    },
+    {
+      "id": "3",
+      "title": "Interactive Story Generator",
+      "description": "A choose-your-own-adventure story generator powered by LLMs that creates branching narratives.",
+      "image": "images/placeholder.jpg",
+      "demoUrl": "#demo-3",
+      "codeUrl": "#code-3",
+      "tags": ["LLM", "Storytelling", "JavaScript", "Interactive"]
+    }
+  ]
+}
