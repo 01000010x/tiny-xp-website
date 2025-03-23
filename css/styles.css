@@ -103,20 +103,40 @@ header h1 {
     width: 100%;
 }
 
+/* Experiment Card Container */
+.experiment-card-container {
+    position: relative;
+    min-height: 250px;
+}
+
+/* White Background */
+.experiment-card-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: var(--border-radius);
+}
+
 /* Experiment Card */
 .experiment-card {
     background-color: var(--light-gray);
     border-radius: var(--border-radius);
-    overflow: hidden;
-    transition: var(--transition);
     border: 1px solid var(--primary-color);
-    position: relative;
-    min-height: 250px; /* Ensure cards have a good height */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: var(--transition);
+    z-index: 1;
 }
 
 .experiment-card:hover {
-    transform: translate(-3px, -3px);
-    box-shadow: 5px 5px 0px #000000;
+    transform: translate(-4px, -4px);
 }
 
 .card-content {

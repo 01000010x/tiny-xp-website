@@ -64,16 +64,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         const experimentsHTML = filteredExperiments.map(experiment => `
-            <div class="experiment-card" data-id="${experiment.id}">
-                <div class="card-content">
-                    <h3 class="card-title">${experiment.title}</h3>
-                    <p class="card-description">${experiment.description}</p>
-                    <div class="card-tags">
-                        ${experiment.tags.map(tag => `<span class="card-tag">${tag}</span>`).join('')}
-                    </div>
-                    <div class="card-links">
-                        <a href="${experiment.demoUrl}" class="card-link" target="_blank">run</a>
-                        ${experiment.codeUrl ? `<a href="${experiment.codeUrl}" class="card-link secondary" target="_blank">view_source</a>` : ''}
+            <div class="experiment-card-container">
+                <div class="experiment-card-bg"></div>
+                <div class="experiment-card" data-id="${experiment.id}">
+                    <div class="card-content">
+                        <h3 class="card-title">${experiment.title}</h3>
+                        <p class="card-description">${experiment.description}</p>
+                        <div class="card-tags">
+                            ${experiment.tags.map(tag => `<span class="card-tag">${tag}</span>`).join('')}
+                        </div>
+                        <div class="card-links">
+                            <a href="${experiment.demoUrl}" class="card-link" target="_blank">run</a>
+                            ${experiment.codeUrl ? `<a href="${experiment.codeUrl}" class="card-link secondary" target="_blank">view_source</a>` : ''}
+                        </div>
                     </div>
                 </div>
             </div>
