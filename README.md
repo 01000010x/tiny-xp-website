@@ -1,6 +1,7 @@
 # /dev/vibe
 
 A simple HTML, CSS, and JavaScript website for showcasing tiny coding experiments with LLMs.
+
 It's vibe coding with real life constraints
 1. Act like a non coder: I don't modify the code, just interact with LLM's
 2. 1h contraint, after 1h of tests and experiments I ship it
