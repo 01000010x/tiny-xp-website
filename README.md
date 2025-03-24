@@ -1,6 +1,13 @@
-# Tiny Experiments
+# /dev/vibe
 
-A simple HTML, CSS, and JavaScript website for showcasing coding experiments with LLMs.
+A simple HTML, CSS, and JavaScript website for showcasing tiny coding experiments with LLMs.
+I vibe coding with real life constraints
+1. Act like a non coder: I don't modify the code, just interact with LLM's
+2. 1h contraint, after 1h of tests and experiments I ship it
+
+Feel free to copy this challenge and get a first hand and prolific experience about what LLM's can and can't do for non coders.
+
+-------------------------------------------------------------------------------------------------------------------------------
 
 ## Project Structure
 
@@ -43,34 +50,3 @@ To add a new experiment to your collection, simply edit the `data/experiments.js
 - `demoUrl`: URL to view the live demo
 - `codeUrl`: URL to view the source code (optional)
 - `tags`: Array of tags to categorize your experiment
-
-## Hosting Options
-
-This site can be hosted for free on:
-
-1. **GitHub Pages**: Push to a GitHub repository and enable GitHub Pages
-2. **Netlify**: Connect to your GitHub repository for automatic deployment
-3. **Vercel**: Similar to Netlify with a generous free tier
-4. **Cloudflare Pages**: Free with unlimited bandwidth
-
-## Local Development
-
-To test the site locally, you have several options:
-
-### Option 1: Open directly in browser
-Simply open the `index.html` file in your browser. Note that some browsers may block loading the JSON file for security reasons.
-
-### Option 2: Use a simple HTTP server
-If you have Python installed:
-```
-python -m http.server
-# or
-python3 -m http.server
-```
-
-### Option 3: Use your existing development setup
-If you already have a development server you're comfortable with (like from other projects), you can use that to serve this directory.
-
-### Option 4: Browser extensions
-Many browsers have extensions that can serve local files, like "Web Server for Chrome".
-# tiny-xp-website
